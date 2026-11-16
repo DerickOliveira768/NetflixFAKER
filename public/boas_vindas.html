@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netflix - Início</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>NETFLIX</h1>
+    <nav>
+      <a href="boas_vindas.html" class="active">Início</a>
+      <a href="admin.html" id="navAdminLink">Gerenciar Assinantes</a>
+      <a href="#" onclick="fazerLogout()">Sair</a>
+    </nav>
+  </header>
+
+  <section class="hero-banner" style="padding: 2.5rem 1.5rem 1.5rem;">
+    <h2 id="welcomeHeading">Filmes, séries e muito mais, sem limites</h2>
+    <p>Explore os destaques da semana no carrossel abaixo ou adicione à sua lista.</p>
+  </section>
+
+  <!-- CARROSSEL DE DESTAQUES -->
+  <div class="carrossel-container">
+    <h3 class="section-title" style="max-width: 1150px; margin: 0 auto 1.2rem;">🔥 Destaques em Cartaz</h3>
+    
+    <div class="carrossel">
+      <div class="slide1" onclick="anterior()">
+        <div class="capa">
+          <img id="capaLivroEsquerda" src="https://thumb.wikimedia.org/wikipedia/pt/thumb/3/3b/Deadpool_2016.jpg/250px-Deadpool_2016.jpg?utm_source=pt.wikipedia.org&utm_campaign=parser&utm_content=thumbnail" alt="Capa Esquerda">
+        </div>
+        <div class="texto">
+          <p id="textoLivroEsquerda"></p>
+        </div>
+      </div>
+
+      <button class="seta" onclick="anterior()" aria-label="Anterior">&#10094;</button>
+
+      <div class="slide">
+        <div class="capa">
+          <img id="capaLivroCentro" src="https://s2-globo-play.glbimg.com/ivqnMS5MVH_x6Sc4wSNKhRpCkuo=/362x0/https://s2-globo-play.glbimg.com/TJiPIAt5bLinXu0Vha4OB8ZGE4o=/https://s2.glbimg.com/XK52q5xYIFrzMi1nRAJT4q61BhE=/i.s3.glbimg.com/v1/AUTH_c3c606ff68e7478091d1ca496f9c5625/internal_photos/bs/2025/9/U/hWZBHATXAZhv2uQgDfiQ/2025-4873-vitoria-poster.jpg" alt="Capa Centro">
+        </div>
+        <div class="texto">
+          <h4 id="tituloLivroCentro"></h4>
+          <p id="textoLivroCentro"></p>
+          <button type="button" id="btnCarrosselLista" style="margin-top: 0.75rem;">▶ Assistir / Minha Lista</button>
+        </div>
+      </div>
+
+      <button class="seta" onclick="proximo()" aria-label="Próximo">&#10095;</button>
+
+      <div class="slide1" onclick="proximo()">
+        <div class="capa">
+          <img id="capaLivroDireita" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8khiD92rNg1oeRkQnSx0oQWpIzQ2BNFxzB5X-fCOMT0ckYzqH9srjUNU&s=10" alt="Capa Direita">
+        </div>
+        <div class="texto">
+          <p id="textoLivroDireita"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CATÁLOGO EM GRADE -->
+  <div class="container">
+    <h3 class="section-title">Em Alta na Netflix</h3>
+
+    <div class="product-grid">
+      <div class="product-card">
+        <span class="badge">Top 1 Hoje</span>
+        <img src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?w=400&auto=format&fit=crop" alt="Stranger Code">
+        <div class="product-info">
+          <h4>Stranger Code</h4>
+          <p class="product-desc">Quando um algoritmo desaparece em uma pequena cidade, segredos sombrios vêm à tona.</p>
+          <div class="price-container">
+            <span class="match-score">98% relevante</span>
+            <span class="age-rating">16</span>
+            <span style="color: #a3a3a3;">4 Temporadas</span>
+          </div>
+          <button type="button" onclick="adicionarAoCarrinho('Stranger Code')">▶ Assistir / Minha Lista</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <span class="badge">Original Netflix</span>
+        <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=400&auto=format&fit=crop" alt="La Casa de Dados">
+        <div class="product-info">
+          <h4>La Casa de Dados</h4>
+          <p class="product-desc">Oito hackers planejam o maior assalto digital da história ao banco central.</p>
+          <div class="price-container">
+            <span class="match-score">99% relevante</span>
+            <span class="age-rating">18</span>
+            <span style="color: #a3a3a3;">5 Partes</span>
+          </div>
+          <button type="button" onclick="adicionarAoCarrinho('La Casa de Dados')">▶ Assistir / Minha Lista</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=400&auto=format&fit=crop" alt="O Caçador de Bugs">
+        <div class="product-info">
+          <h4>O Caçador de Bugs</h4>
+          <p class="product-desc">Em um mundo sombrio de servidores legados, um caçador solitário busca falhas mortais.</p>
+          <div class="price-container">
+            <span class="match-score">94% relevante</span>
+            <span class="age-rating">16</span>
+            <span style="color: #a3a3a3;">3 Temporadas</span>
+          </div>
+          <button type="button" onclick="adicionarAoCarrinho('O Caçador de Bugs')">▶ Assistir / Minha Lista</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <span class="badge">Nova Temporada</span>
+        <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=400&auto=format&fit=crop" alt="Espelho Sombrio">
+        <div class="product-info">
+          <h4>Espelho Sombrio</h4>
+          <p class="product-desc">Uma antologia de ficção científica que explora um futuro próximo e distópico da tecnologia.</p>
+          <div class="price-container">
+            <span class="match-score">97% relevante</span>
+            <span class="age-rating">16</span>
+            <span style="color: #a3a3a3;">6 Temporadas</span>
+          </div>
+          <button type="button" onclick="adicionarAoCarrinho('Espelho Sombrio')">▶ Assistir / Minha Lista</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const user = JSON.parse(localStorage.getItem('usuarioLogado'));
+      if (user) {
+        document.getElementById('welcomeHeading').textContent = `Quem está assistindo? Olá, ${user.nome}!`;
+      }
+      if (typeof atualizarCarrossel === 'function') {
+        atualizarCarrossel();
+      }
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nome": "Administrador",
+      "sobrenome": "Netflix",
+      "cpf": "000.000.000-00",
+      "email": "admin@netflix.com",
+      "senha": "123",
+      "rua": "Av. Central, 1000",
+      "cep": "01000-000",
+      "cidade": "São Paulo",
+      "estado": "SP",
+      "telefone": "(11) 99999-9999",
+      "perfil": "admin"
+    },
+    {
+      "id": "2",
+      "nome": "Derick",
+      "sobrenome": "Hatiro",
+      "cpf": "123.456.789-00",
+      "email": "derick@email.com",
+      "senha": "123",
+      "rua": "Rua das Flores, 123",
+      "cep": "02000-000",
+      "cidade": "Campinas",
+      "estado": "SP",
+      "telefone": "(19) 98888-7777",
+      "perfil": "user"
+    },
+    {
+      "nome": "Biatriza",
+      "sobrenome": "Sousa",
+      "cpf": "013456153251",
+      "telefone": "2345678",
+      "email": "play73535@gmail.com",
+      "senha": "GnomosSãoLegais",
+      "cep": "1213131344",
+      "rua": "Rua marcelinho gaucho da silva",
+      "cidade": "Mogi das Cruzes",
+      "estado": "PF",
+      "perfil": "user",
+      "id": "RKFUmvm"
+    }
+  ]
+}
